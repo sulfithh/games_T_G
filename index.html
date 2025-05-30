@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Arcade Hub</title>
+  </head>
+  <body class="light-theme">
+    <nav class="navbar">
+      <div class="nav-left">
+        <h1>Arcade Hub</h1>
+      </div>
+      
+    </nav>
+    <div class="title">
+      <h1>Welcome to Mini Arcade!</h1>
+      <p>
+        Get ready to play and have some fun! Choose a game below. Let's play!
+      </p>
+    </div>
+    <div class="selection-wrapper">
+      <div class="game">
+        <h2> Guess My Number</h2>
+        <p>Can you guess the number I'm thinking of?</p>
+        <ul>
+          <li>The number is between 1 and 20.</li>
+          <li>You have limited attempts .</li>
+          <li>
+            After each guess, you'll get a hint: "Too high", "Too low", or
+            "Correct!".
+          </li>
+          <li>Your score is based on how quickly you guess it.</li>
+          <li>Try to beat your high score!</li>
+        </ul>
+        <button id="btn1">Play Game</button>
+      </div>
+      <div class="game">
+        <h2> Tic Tac Toe</h2>
+        <p>The classic game of strategy for two players.</p>
+        <ul>
+          <li>Players take turns marking X and O on the 3x3 grid.</li>
+          <li>
+            The first player to get 3 in a row (horizontally, vertically, or
+            diagonally) wins.
+          </li>
+          <li>If all 9 squares are filled and no one wins, it's a draw!</li>
+          <li>Click on a square to make your move.</li>
+        </ul>
+        <button id="btn2">Play Game</button>
+      </div>
+    </div>
+
+    <script>
+      const btn1 = document.getElementById("btn1");
+      btn1.addEventListener(
+        "click",
+        () => (location.href = "guessMyNumber.html")
+      );
+      const btn2 = document.getElementById("btn2");
+      btn2.addEventListener("click", () => (location.href = "tictactoe.html"));
+    </script>
+  </body>
+</html>
+
