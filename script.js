@@ -1,15 +1,14 @@
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
-
+console.log(document.querySelector("body").classList);
 const displayMessage = function (message) {
   const msg = document.querySelector("#msg");
   msg.textContent = message;
   msg.classList.add("message-wrong");
   msg.addEventListener(
     "animationend",
-    () => msg.classList.remove("message-wrong"),
-    { once: true }
+    () => msg.classList.remove("message-wrong") 
   );
 };
 

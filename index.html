@@ -16,17 +16,22 @@
       <div class="nav-left">
         <h1>Arcade Hub</h1>
       </div>
-      
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-btn">Dark </button>
+        <img src="profile-user.png" alt="Profile" class="profile-icon" />
+      </div>
     </nav>
     <div class="title">
       <h1>Welcome to Mini Arcade!</h1>
       <p>
-        Get ready to play and have some fun! Choose a game below. Let's play!
+        Get ready to play and have some fun! Choose a game below and challenge
+        yourself or a friend. Whether you're into classic strategy or testing
+        your luck, there's something for everyone. Let's play!
       </p>
     </div>
     <div class="selection-wrapper">
       <div class="game">
-        <h2> Guess My Number</h2>
+        <h2>Guess My Number</h2>
         <p>Can you guess the number I'm thinking of?</p>
         <ul>
           <li>The number is between 1 and 20.</li>
@@ -41,7 +46,7 @@
         <button id="btn1">Play Game</button>
       </div>
       <div class="game">
-        <h2> Tic Tac Toe</h2>
+        <h2>Tic Tac Toe</h2>
         <p>The classic game of strategy for two players.</p>
         <ul>
           <li>Players take turns marking X and O on the 3x3 grid.</li>
@@ -57,6 +62,20 @@
     </div>
 
     <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const body = document.body;
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+        body.classList.toggle("light-theme");
+
+        if (body.classList.contains("dark-theme")) {
+          themeToggle.textContent = "Light";
+        } else {
+          themeToggle.textContent = "Dark";
+        }
+      });
+
       const btn1 = document.getElementById("btn1");
       btn1.addEventListener(
         "click",
@@ -67,4 +86,3 @@
     </script>
   </body>
 </html>
-
