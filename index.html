@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-
+ 
     <title>Arcade Hub</title>
   </head>
   <body class="light-theme">
@@ -17,8 +13,8 @@
         <h1>Arcade Hub</h1>
       </div>
       <div class="nav-right">
-        <button id="themeToggle" class="theme-btn">Dark </button>
-        <img src="profile-user.png" alt="Profile" class="profile-icon" />
+        <button id="themeToggle" class="theme-btn" onclick="toggleee()">Dark </button>
+        <img src="user-dark.png" alt="Profile" class="profile-icon" />
       </div>
     </nav>
     <div class="title">
@@ -64,6 +60,7 @@
     <script>
       const themeToggle = document.getElementById("themeToggle");
       const body = document.body;
+      const profileicon=document.getElementsByClassName("profile-icon");
 
       themeToggle.addEventListener("click", () => {
         body.classList.toggle("dark-theme");
@@ -71,10 +68,13 @@
 
         if (body.classList.contains("dark-theme")) {
           themeToggle.textContent = "Light";
+          profileicon[0].src="user-dark.png";
         } else {
           themeToggle.textContent = "Dark";
+          profileicon[0].src="user-light.png";
         }
       });
+    
 
       const btn1 = document.getElementById("btn1");
       btn1.addEventListener(
